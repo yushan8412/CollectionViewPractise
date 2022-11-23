@@ -11,7 +11,6 @@ class IGCollectionViewCell: UICollectionViewCell {
     
     // MARK: property
 
-//    @IBOutlet weak var pic: UIImageView!
     static let identifier = "IGCollectionViewCell"
     var pic: UIImageView = {
         let pic = UIImageView()

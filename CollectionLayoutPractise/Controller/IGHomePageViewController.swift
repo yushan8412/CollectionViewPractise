@@ -18,9 +18,9 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
     
     let imagePicker = UIImagePickerController()
     
-    var countryPicArray: [UIImage] = []
+    var countryPicArray: [PicInfo] = []
     
-    var beachPicArray: [UIImage] = []
+    var beachPicArray: [PicInfo] = []
     
     var addPicBtn: UIButton = {
         let btn = UIButton()
@@ -33,8 +33,8 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 未來可以加入
 //        imagePicker.delegate = self
-        
         view.backgroundColor = .white
         self.navigationController?.navigationBar.barTintColor = .black
         configureUI()
@@ -83,22 +83,15 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
         addPicBtn.addTarget(self, action: #selector(tappedAddBtn), for: .touchUpInside)
     }
     
+    // imagePicker 未來可以加入
     @objc func tappedAddBtn() {
         self.imagePicker.sourceType = .photoLibrary
         self.present(imagePicker, animated: true)
     }
-    
-//    func setArrayUp() {
-//        guard let image = UIImage(named: "spain") else { return }
-//        self.countryPicArray.append(image)
-//        
-//        self.countryPicArray = [UIImage(named: "spain")!, UIImage(named: "france")!, UIImage(named: "germany")!, UIImage(named: "netherlands")! ]
-//        
-//    }
 
 }
 
-// MARK: collectionView
+// MARK: - collectionView
 extension IGHomePageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section {
@@ -115,7 +108,7 @@ extension IGHomePageViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IGCollectionViewCell.identifier, for: indexPath) as? IGCollectionViewCell else { return UICollectionViewCell()}
-        cell.pic.image = countryPicArray[indexPath.row]
+        cell.pic.image = countryPicArray[indexPath.row].pic
         return cell
     }
     
@@ -130,7 +123,8 @@ extension IGHomePageViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
-// MARK: ImagePicker
+// MARK: - ImagePicker
+// 未來可以加入
 //extension IGHomePageViewController: UIImagePickerControllerDelegate {
 //
 //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
