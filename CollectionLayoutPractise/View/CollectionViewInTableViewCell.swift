@@ -7,6 +7,8 @@
 
 import UIKit
 
+// TODO: 應該要做三種 TableViewCell  然後建立三個檔案，在 tableView 那再去選擇要用哪個
+
 class CollectionViewInTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,7 +21,6 @@ class CollectionViewInTableViewCell: UITableViewCell {
         contentView.backgroundColor = .systemPink
         setupCell()
         setupCollectionView()
-//        contentView.backgroundColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +30,7 @@ class CollectionViewInTableViewCell: UITableViewCell {
     
     // MARK: - method
     func setupCollectionView() {
+        // TODO: 可以註冊多個 cell
         self.collectionView.register(IGCollectionViewCell.self, forCellWithReuseIdentifier: IGCollectionViewCell.identifier)
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -39,15 +41,11 @@ class CollectionViewInTableViewCell: UITableViewCell {
     func setupCell() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        layout.minimumLineSpacing = 5
-        layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: 250, height: 180)
         collectionView.collectionViewLayout = layout
     }
 }
 
-extension CollectionViewInTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CollectionViewInTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return countryArray.count
     }
@@ -59,5 +57,20 @@ extension CollectionViewInTableViewCell: UICollectionViewDelegate, UICollectionV
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 250, height: 180)
+    }
     
 }

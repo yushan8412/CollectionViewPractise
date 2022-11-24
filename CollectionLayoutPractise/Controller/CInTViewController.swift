@@ -58,7 +58,16 @@ extension CInTViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        switch indexPath.section {
+        case 0:
+            return 200
+        case 1:
+            return 100
+        case 2:
+            return 200
+        default:
+            return 200
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -69,7 +78,6 @@ extension CInTViewController: UITableViewDelegate, UITableViewDataSource {
             return " Movie"
         case 2:
             return " Beach"
-            
         default:
             return " Any"
         }
