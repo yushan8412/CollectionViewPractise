@@ -22,17 +22,21 @@ class CInTViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightGray
+        view.addSubview(tableView)
         setupTableView()
     }
     
     func setupTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
-        view.addSubview(tableView)
         tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
-                         bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0,
+                         bottom: self.view.bottomAnchor, right: view.rightAnchor, paddingTop: 0,
                          paddingLeft: 0, paddingBottom: 0 ,paddingRight: 0 )
         self.tableView.register(CollectionViewInTableViewCell.self, forCellReuseIdentifier: "CollectionViewInTableViewCell")
+        self.tableView.register(UINib(nibName:"CollectionViewInTableViewCell", bundle:nil),
+                                   forCellReuseIdentifier:"CollectionViewInTableViewCell")
     
     }
     
@@ -41,6 +45,10 @@ class CInTViewController: UIViewController {
 // MARK: - tableView
 extension CInTViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
@@ -49,5 +57,23 @@ extension CInTViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section{
+        case 0:
+            return " Country"
+        case 1:
+            return " Movie"
+        case 2:
+            return " Beach"
+            
+        default:
+            return " Any"
+        }
+        
+    }
     
 }

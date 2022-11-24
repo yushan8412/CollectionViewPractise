@@ -16,9 +16,10 @@ class CollectionViewInTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setupCollectionView()
+        contentView.backgroundColor = .systemPink
         setupCell()
-        contentView.backgroundColor = .lightGray
+        setupCollectionView()
+//        contentView.backgroundColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,13 +37,13 @@ class CollectionViewInTableViewCell: UITableViewCell {
     }
     
     func setupCell() {
-        let layout = UICollectionViewFlowLayout()
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         layout.minimumLineSpacing = 5
         layout.minimumInteritemSpacing = 5
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: contentView.frame.height * 2, height: (contentView.frame.height) - 10 )
-//        collectionView.collectionViewLayout = layout
+        layout.itemSize = CGSize(width: 250, height: 180)
+        collectionView.collectionViewLayout = layout
     }
 }
 
