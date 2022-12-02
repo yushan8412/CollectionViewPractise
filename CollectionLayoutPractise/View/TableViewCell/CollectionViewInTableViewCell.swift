@@ -30,7 +30,6 @@ class CollectionViewInTableViewCell: UITableViewCell {
     
     // MARK: - method
     func setupCollectionView() {
-        // TODO: 可以註冊多個 cell
         self.collectionView.register(IGCollectionViewCell.self, forCellWithReuseIdentifier: IGCollectionViewCell.identifier)
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -73,4 +72,7 @@ extension CollectionViewInTableViewCell: UICollectionViewDelegate, UICollectionV
         return CGSize(width: 250, height: 180)
     }
     
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        let view = view as! UI
+//    }
 }
