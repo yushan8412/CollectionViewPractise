@@ -14,8 +14,11 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
     
     var nameLB: UILabel = {
         let lb = UILabel()
+//        let font = UIFont(name: "Impact", size: 20)
         lb.textColor = .black
-        lb.font = UIFont(name: "Bradly hand", size: 20)
+        lb.font = UIFont(name: "Impact", size: 20)
+//        let attributedText = NSMutableAttributedString(string: "Text.", attributes: [.foregroundColor: UIColor.black, .font: font])
+
         return lb
     }()
     
@@ -58,6 +61,7 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
         pic.contentMode = .scaleAspectFill
         nameLB.anchor(top: pic.bottomAnchor, bottom: contentView.bottomAnchor, paddingTop: 5, paddingBottom: 5, height: 20)
         nameLB.centerX(inView: pic, paddingTop: 5)
+        nameLB.font = UIFont(name: "Bradly hand", size: 30)
     }
 
 }

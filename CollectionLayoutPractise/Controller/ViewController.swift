@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         let btn = UIButton()
         btn.setTitle(" Basic CollectionView ", for: .normal)
         btn.setTitleColor(.black, for: .normal)
-        btn.backgroundColor = .cyan
+        btn.backgroundColor = .pGreen
         return btn
     }()
     
@@ -22,7 +22,15 @@ class ViewController: UIViewController {
         let btn = UIButton()
         btn.setTitle(" CollectionView in TableView ", for: .normal)
         btn.setTitleColor(.black, for: .normal)
-        btn.backgroundColor = .lightGray
+        btn.backgroundColor = .pBlue
+        return btn
+    }()
+    
+    var btn3: UIButton = {
+        let btn = UIButton()
+        btn.setTitle(" Waterfall layout ", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .rosePink
         return btn
     }()
     
@@ -43,8 +51,10 @@ class ViewController: UIViewController {
     func configureUI() {
         view.addSubview(btn1)
         view.addSubview(btn2)
+        view.addSubview(btn3)
         setupBtn1()
         setupBtn2()
+        setupBtn3()
         
     }
     
@@ -60,6 +70,13 @@ class ViewController: UIViewController {
         
     }
     
+    func setupBtn3() {
+        btn3.anchor(top: btn2.bottomAnchor, paddingTop: 20)
+        btn3.centerX(inView: btn1, paddingTop: 20)
+        btn3.addTarget(self, action: #selector(tappedBtn), for: .touchUpInside)
+        
+    }
+    
     @objc func tappedBtn(sender: UIButton) {
         
         if sender == btn1 {
@@ -68,12 +85,16 @@ class ViewController: UIViewController {
             vc.countryPicArray = self.countryArray
             self.navigationController?.pushViewController(vc, animated: true)
             
-        } else {
-            print("did tapped")
+        } else if sender == btn2 {
             let vc = CInTViewController()
             vc.modalPresentationStyle = .overFullScreen
             self.navigationController?.pushViewController(vc, animated: true)
-                        
+            
+        } else if sender == btn3 {
+            print("did tapped btn3")
+            let vc = CollectionViewFunctionVC()
+            vc.modalPresentationStyle = .overFullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     

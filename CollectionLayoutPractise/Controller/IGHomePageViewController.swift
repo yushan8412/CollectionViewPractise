@@ -13,9 +13,7 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
     var collectionView: UICollectionView?
     
     var fullScreenSize: CGSize = UIScreen.main.bounds.size
-    
-    let layout = UICollectionViewFlowLayout()
-    
+        
     let imagePicker = UIImagePickerController()
     
     var countryPicArray: [PicInfo] = []
@@ -42,7 +40,6 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         self.collectionView?.reloadData()
-        print("i got \(beachPicArray.count) picccc")
     }
 
     func configureUI() {
@@ -60,7 +57,6 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
         // 每個 item 之間的 spacing
         layout.minimumInteritemSpacing = 1
         
-
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 100, width: fullScreenSize.width,
                                                         height: fullScreenSize.height - 100),
                                           collectionViewLayout: layout)

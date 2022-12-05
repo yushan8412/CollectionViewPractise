@@ -53,6 +53,7 @@ extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.pic.image = self.movieArray[indexPath.row].pic
         cell.nameLB.text = self.movieArray[indexPath.row].name
+        cell.nameLB.font = UIFont(name: "Impact", size: 20)
         return cell
     }
     

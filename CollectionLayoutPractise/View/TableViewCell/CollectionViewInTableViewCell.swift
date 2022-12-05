@@ -34,7 +34,6 @@ class CollectionViewInTableViewCell: UITableViewCell {
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         contentView.addSubview(collectionView)
-        
     }
     
     func setupCell() {
@@ -72,7 +71,4 @@ extension CollectionViewInTableViewCell: UICollectionViewDelegate, UICollectionV
         return CGSize(width: 250, height: 180)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        let view = view as! UI
-//    }
 }

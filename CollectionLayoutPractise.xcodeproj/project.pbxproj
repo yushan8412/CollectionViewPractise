@@ -24,6 +24,10 @@
 		846A129429271E87002A4637 /* CollectionLayoutPractiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A129329271E87002A4637 /* CollectionLayoutPractiseUITestsLaunchTests.swift */; };
 		846A12A229276BF4002A4637 /* AnchorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A12A129276BF4002A4637 /* AnchorExtension.swift */; };
 		846A12A6292773C0002A4637 /* IGHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A12A5292773C0002A4637 /* IGHomePageViewController.swift */; };
+		8472B814293D8CCA006DE559 /* UICustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472B813293D8CCA006DE559 /* UICustomCollectionViewLayout.swift */; };
+		8472B816293D90D0006DE559 /* WaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472B815293D90D0006DE559 /* WaterFallLayout.swift */; };
+		8472B818293D96E9006DE559 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472B817293D96E9006DE559 /* UIColor.swift */; };
+		8472B81A293D9B43006DE559 /* CollectionViewFunctionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472B819293D9B43006DE559 /* CollectionViewFunctionVC.swift */; };
 		849A2890292DCEAB0095A33A /* CInTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A288F292DCEAB0095A33A /* CInTViewController.swift */; };
 		849A2893292DD3800095A33A /* CollectionViewInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849A2891292DD3800095A33A /* CollectionViewInTableViewCell.swift */; };
 		849A2894292DD3800095A33A /* CollectionViewInTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849A2892292DD3800095A33A /* CollectionViewInTableViewCell.xib */; };
@@ -71,6 +75,10 @@
 		846A129329271E87002A4637 /* CollectionLayoutPractiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayoutPractiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		846A12A129276BF4002A4637 /* AnchorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorExtension.swift; sourceTree = "<group>"; };
 		846A12A5292773C0002A4637 /* IGHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGHomePageViewController.swift; sourceTree = "<group>"; };
+		8472B813293D8CCA006DE559 /* UICustomCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		8472B815293D90D0006DE559 /* WaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallLayout.swift; sourceTree = "<group>"; };
+		8472B817293D96E9006DE559 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8472B819293D9B43006DE559 /* CollectionViewFunctionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFunctionVC.swift; sourceTree = "<group>"; };
 		849A288F292DCEAB0095A33A /* CInTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CInTViewController.swift; sourceTree = "<group>"; };
 		849A2891292DD3800095A33A /* CollectionViewInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewInTableViewCell.swift; sourceTree = "<group>"; };
 		849A2892292DD3800095A33A /* CollectionViewInTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewInTableViewCell.xib; sourceTree = "<group>"; };
@@ -185,6 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				846A12A129276BF4002A4637 /* AnchorExtension.swift */,
+				8472B813293D8CCA006DE559 /* UICustomCollectionViewLayout.swift */,
+				8472B815293D90D0006DE559 /* WaterFallLayout.swift */,
+				8472B817293D96E9006DE559 /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 				846A127429271E85002A4637 /* ViewController.swift */,
 				846A12A5292773C0002A4637 /* IGHomePageViewController.swift */,
 				849A288F292DCEAB0095A33A /* CInTViewController.swift */,
+				8472B819293D9B43006DE559 /* CollectionViewFunctionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,18 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8472B816293D90D0006DE559 /* WaterFallLayout.swift in Sources */,
 				844115A4292F766C006ECDD8 /* MovieTableViewCell.swift in Sources */,
 				849A2893292DD3800095A33A /* CollectionViewInTableViewCell.swift in Sources */,
 				84C78AD5292B113E00B7E3D1 /* IGCollectionViewCell.swift in Sources */,
+				8472B818293D96E9006DE559 /* UIColor.swift in Sources */,
 				849A2890292DCEAB0095A33A /* CInTViewController.swift in Sources */,
 				846A12A229276BF4002A4637 /* AnchorExtension.swift in Sources */,
 				846A12A6292773C0002A4637 /* IGHomePageViewController.swift in Sources */,
 				842950142930618C0037BBD9 /* PicWithNameCollectionViewCell.swift in Sources */,
+				8472B814293D8CCA006DE559 /* UICustomCollectionViewLayout.swift in Sources */,
 				84C78ADD292B5E2400B7E3D1 /* MovieModel.swift in Sources */,
 				846A127529271E85002A4637 /* ViewController.swift in Sources */,
 				846A127129271E85002A4637 /* AppDelegate.swift in Sources */,
 				844115A8292F767F006ECDD8 /* beachTableViewCell.swift in Sources */,
 				846A127329271E85002A4637 /* SceneDelegate.swift in Sources */,
+				8472B81A293D9B43006DE559 /* CollectionViewFunctionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

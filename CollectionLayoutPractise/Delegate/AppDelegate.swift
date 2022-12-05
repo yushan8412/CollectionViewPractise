@@ -20,11 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
-//        navigationController.viewControllers = [rootViewController]
-//        self.window?.rootViewController = navigationController
-//        
+        let UILabelAppeareance = UILabel.appearance()
+            UILabelAppeareance.font = UIFont.preferredFont(forTextStyle: .body)
+            UILabelAppeareance.adjustsFontForContentSizeCategory = true
+     
         return true
     }
     
