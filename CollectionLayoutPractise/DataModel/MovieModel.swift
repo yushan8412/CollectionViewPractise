@@ -43,8 +43,6 @@ class DataModel {
         return countryArray
         
     }
-    
 
-    
 }
 

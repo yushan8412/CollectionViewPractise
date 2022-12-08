@@ -51,7 +51,6 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
         layout.itemSize = CGSize(width: (view.frame.width/3) - 3,
                                  height: (view.frame.width/3) - 3)
-//        layout.scrollDirection = .horizontal
         // 每一行的 spacing
         layout.minimumLineSpacing = 1
         // 每個 item 之間的 spacing

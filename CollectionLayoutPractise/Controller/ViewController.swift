@@ -8,8 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-// MARK: - property
+    
+    // MARK: - property
+    // TODO: 這邊應該要改掉 不要讓 code 一直重複
     var btn1: UIButton = {
         let btn = UIButton()
         btn.setTitle(" Basic CollectionView ", for: .normal)
@@ -34,27 +35,39 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    var btn4: UIButton = {
+        let btn = UIButton()
+        btn.setTitle(" Center Item ", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .rosePink
+        return btn
+    }()
+    
+    
     var countryArray: [PicInfo] = []
     var moviewArray: [PicInfo] = []
     var beachArray: [PicInfo] = []
     
-// MARK: - LifeCycle
-
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         setDataUp()
     }
     
-// MARK: - UI
+    // MARK: - UI
     
     func configureUI() {
         view.addSubview(btn1)
         view.addSubview(btn2)
         view.addSubview(btn3)
+        view.addSubview(btn4)
+        
         setupBtn1()
         setupBtn2()
         setupBtn3()
+        setupBtn4()
         
     }
     
@@ -77,6 +90,13 @@ class ViewController: UIViewController {
         
     }
     
+    func setupBtn4() {
+        btn4.anchor(top: btn3.bottomAnchor, paddingTop: 20)
+        btn4.centerX(inView: btn1, paddingTop: 20)
+        btn4.addTarget(self, action: #selector(tappedBtn), for: .touchUpInside)
+        
+    }
+    
     @objc func tappedBtn(sender: UIButton) {
         
         if sender == btn1 {
@@ -91,18 +111,18 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             
         } else if sender == btn3 {
-            print("did tapped btn3")
-            let vc = CollectionViewFunctionVC()
+            let vc = WaterfallLayoutVC()
             vc.modalPresentationStyle = .overFullScreen
             self.navigationController?.pushViewController(vc, animated: true)
+        } else {
+            print("did tapped btn3")
         }
     }
     
     func setDataUp() {
-//        self.moviewArray = DataModel.shared.setMovieArrayUp()
+        //        self.moviewArray = DataModel.shared.setMovieArrayUp()
         self.countryArray = DataModel.shared.setCountryArrayUp()
     }
-
-
+    
 }
 

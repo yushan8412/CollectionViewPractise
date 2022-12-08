@@ -37,9 +37,7 @@ class MovieTableViewCell: UITableViewCell {
         layout.scrollDirection = .horizontal
         movieCollectionView.collectionViewLayout = layout
     }
-    
-    
-    
+ 
 }
 
 extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -72,7 +70,5 @@ extension MovieTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
-    
-    
     
 }
