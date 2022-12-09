@@ -65,7 +65,6 @@ class IGHomePageViewController: UIViewController, UINavigationControllerDelegate
         self.view = view
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        collectionView?.backgroundColor = .twitterBlue
         view.addSubview(collectionView ?? UICollectionView())
     }
     

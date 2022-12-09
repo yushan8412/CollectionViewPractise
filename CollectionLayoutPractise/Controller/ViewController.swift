@@ -114,6 +114,11 @@ class ViewController: UIViewController {
             let vc = WaterfallLayoutVC()
             vc.modalPresentationStyle = .overFullScreen
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if sender == btn4 {
+            let vc = CenterItemVC()
+            vc.modalPresentationStyle = .overFullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
         } else {
             print("did tapped btn3")
         }

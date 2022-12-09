@@ -14,6 +14,8 @@
 		844115A8292F767F006ECDD8 /* beachTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844115A6292F767F006ECDD8 /* beachTableViewCell.swift */; };
 		844115A9292F767F006ECDD8 /* beachTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844115A7292F767F006ECDD8 /* beachTableViewCell.xib */; };
 		84452E202941E0810053E679 /* CustomBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E1F2941E0810053E679 /* CustomBtn.swift */; };
+		84452E222942D7D40053E679 /* CenterItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E212942D7D40053E679 /* CenterItemVC.swift */; };
+		84452E24294320080053E679 /* ZoomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84452E23294320080053E679 /* ZoomFlowLayout.swift */; };
 		846A127129271E85002A4637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A127029271E85002A4637 /* AppDelegate.swift */; };
 		846A127329271E85002A4637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A127229271E85002A4637 /* SceneDelegate.swift */; };
 		846A127529271E85002A4637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A127429271E85002A4637 /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		844115A6292F767F006ECDD8 /* beachTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beachTableViewCell.swift; sourceTree = "<group>"; };
 		844115A7292F767F006ECDD8 /* beachTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = beachTableViewCell.xib; sourceTree = "<group>"; };
 		84452E1F2941E0810053E679 /* CustomBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBtn.swift; sourceTree = "<group>"; };
+		84452E212942D7D40053E679 /* CenterItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterItemVC.swift; sourceTree = "<group>"; };
+		84452E23294320080053E679 /* ZoomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomFlowLayout.swift; sourceTree = "<group>"; };
 		846A126D29271E85002A4637 /* CollectionLayoutPractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionLayoutPractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846A127029271E85002A4637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846A127229271E85002A4637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				8472B815293D90D0006DE559 /* WaterFallLayout.swift */,
 				8472B817293D96E9006DE559 /* UIColor.swift */,
 				84452E1F2941E0810053E679 /* CustomBtn.swift */,
+				84452E23294320080053E679 /* ZoomFlowLayout.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				846A12A5292773C0002A4637 /* IGHomePageViewController.swift */,
 				849A288F292DCEAB0095A33A /* CInTViewController.swift */,
 				8472B819293D9B43006DE559 /* WaterfallLayoutVC.swift */,
+				84452E212942D7D40053E679 /* CenterItemVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,7 +386,9 @@
 				844115A4292F766C006ECDD8 /* MovieTableViewCell.swift in Sources */,
 				849A2893292DD3800095A33A /* CollectionViewInTableViewCell.swift in Sources */,
 				84C78AD5292B113E00B7E3D1 /* IGCollectionViewCell.swift in Sources */,
+				84452E222942D7D40053E679 /* CenterItemVC.swift in Sources */,
 				8472B818293D96E9006DE559 /* UIColor.swift in Sources */,
+				84452E24294320080053E679 /* ZoomFlowLayout.swift in Sources */,
 				849A2890292DCEAB0095A33A /* CInTViewController.swift in Sources */,
 				84452E202941E0810053E679 /* CustomBtn.swift in Sources */,
 				846A12A229276BF4002A4637 /* AnchorExtension.swift in Sources */,

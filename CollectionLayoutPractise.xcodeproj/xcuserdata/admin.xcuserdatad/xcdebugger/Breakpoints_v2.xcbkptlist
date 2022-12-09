@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D7CCA691-9C74-458A-9D61-E75A5D8DF1CA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollectionLayoutPractise/View/CollectionViewCell/PicWithNameCollectionViewCell.swift"
