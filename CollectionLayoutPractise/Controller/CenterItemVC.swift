@@ -22,6 +22,13 @@ class CenterItemVC: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .white
         ConfigureUI()
+        // 嘗試 fix 進入頁面的問題
+        self.collectionView?.scrollToItem(at:IndexPath(item: 0, section: 0) , at: .left, animated: true)
+        
+        UIView.animate(withDuration: 0.5) {
+            self.collectionView?.scrollToItem(at:IndexPath(item: 1, section: 0) , at: .left, animated: true)
+
+        }
     }
     
     func ConfigureUI() {
@@ -29,13 +36,19 @@ class CenterItemVC: UIViewController {
     }
     
     func setupCollectionView() {
+
         // 這邊改用 ZoomAndSnapFlowLayout
+        // FIXME: 剛進去時 item 不會置中，但滑動過後就可以
         let layout: UICollectionViewFlowLayout = ZoomAndSnapFlowLayout()
         self.collectionView?.collectionViewLayout = layout
+        
+        collectionView?.isPagingEnabled = true
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 200, width: fullScreenSize.width,
                                                         height: (fullScreenSize.height)/2),
                                           collectionViewLayout: layout)
         layout.scrollDirection = .horizontal
+        self.collectionView?.contentInsetAdjustmentBehavior = .always
+
     
         self.collectionView?.register(IGCollectionViewCell.self, forCellWithReuseIdentifier: IGCollectionViewCell.identifier)
         

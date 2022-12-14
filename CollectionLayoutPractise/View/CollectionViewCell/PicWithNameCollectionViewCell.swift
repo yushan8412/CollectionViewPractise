@@ -33,6 +33,7 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCell()
+        transformToLarge()
     }
     
     override init(frame: CGRect) {
@@ -57,11 +58,21 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell() {
-        pic.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nameLB.topAnchor, right: contentView.rightAnchor, paddingTop: 0, paddingLeft: 2, paddingBottom: 10, paddingRight: 2)
+        pic.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: nameLB.topAnchor, right: contentView.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10)
         pic.contentMode = .scaleAspectFill
-        nameLB.anchor(top: pic.bottomAnchor, bottom: contentView.bottomAnchor, paddingTop: 5, paddingBottom: 5, height: 20)
+        pic.layer.cornerRadius = 20
+        nameLB.anchor(top: pic.bottomAnchor, bottom: contentView.bottomAnchor, paddingTop: 5, paddingBottom: 10, height: 20)
         nameLB.centerX(inView: pic, paddingTop: 5)
         nameLB.font = UIFont(name: "Bradly hand", size: 30)
+    }
+    
+    func transformToLarge() {
+        UIView.animate(withDuration: 0.2) {
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.layer.borderColor = UIColor.gray.cgColor
+        }
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 
 }

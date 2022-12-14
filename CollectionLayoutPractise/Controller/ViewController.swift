@@ -43,6 +43,14 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    var btn5: UIButton = {
+        let btn = UIButton()
+        btn.setTitle(" Center Item ", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.backgroundColor = .pBlue
+        return btn
+    }()
+    
     
     var countryArray: [PicInfo] = []
     var moviewArray: [PicInfo] = []
@@ -63,11 +71,14 @@ class ViewController: UIViewController {
         view.addSubview(btn2)
         view.addSubview(btn3)
         view.addSubview(btn4)
-        
+
         setupBtn1()
         setupBtn2()
         setupBtn3()
         setupBtn4()
+        setupBtn5()
+
+        
         
     }
     
@@ -97,6 +108,14 @@ class ViewController: UIViewController {
         
     }
     
+    func setupBtn5() {
+        view.addSubview(btn5)
+        btn5.anchor(top: btn4.bottomAnchor, paddingTop: 20)
+        btn5.centerX(inView: btn1, paddingTop: 20)
+        btn5.addTarget(self, action: #selector(tappedBtn), for: .touchUpInside)
+        
+    }
+    
     @objc func tappedBtn(sender: UIButton) {
         
         if sender == btn1 {
@@ -119,6 +138,12 @@ class ViewController: UIViewController {
             let vc = CenterItemVC()
             vc.modalPresentationStyle = .overFullScreen
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        } else if sender == btn5 {
+            let vc = CenterViewWithCode()
+            vc.modalPresentationStyle = .overFullScreen
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         } else {
             print("did tapped btn3")
         }

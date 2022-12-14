@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8406C8CE2949623400FD3BA9 /* MyFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406C8CD2949623400FD3BA9 /* MyFlowLayout.swift */; };
 		842950142930618C0037BBD9 /* PicWithNameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842950122930618C0037BBD9 /* PicWithNameCollectionViewCell.swift */; };
 		842950152930618C0037BBD9 /* PicWithNameCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842950132930618C0037BBD9 /* PicWithNameCollectionViewCell.xib */; };
 		844115A4292F766C006ECDD8 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844115A2292F766C006ECDD8 /* MovieTableViewCell.swift */; };
@@ -37,6 +38,7 @@
 		84C78AD5292B113E00B7E3D1 /* IGCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C78AD3292B113D00B7E3D1 /* IGCollectionViewCell.swift */; };
 		84C78AD6292B113E00B7E3D1 /* IGCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C78AD4292B113E00B7E3D1 /* IGCollectionViewCell.xib */; };
 		84C78ADD292B5E2400B7E3D1 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C78ADC292B5E2400B7E3D1 /* MovieModel.swift */; };
+		84F1BE162946C53A00F9C44B /* CenterViewWithCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1BE152946C53A00F9C44B /* CenterViewWithCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8406C8CD2949623400FD3BA9 /* MyFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFlowLayout.swift; sourceTree = "<group>"; };
 		842950122930618C0037BBD9 /* PicWithNameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicWithNameCollectionViewCell.swift; sourceTree = "<group>"; };
 		842950132930618C0037BBD9 /* PicWithNameCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicWithNameCollectionViewCell.xib; sourceTree = "<group>"; };
 		844115A2292F766C006ECDD8 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		84C78AD3292B113D00B7E3D1 /* IGCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C78AD4292B113E00B7E3D1 /* IGCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IGCollectionViewCell.xib; sourceTree = "<group>"; };
 		84C78ADC292B5E2400B7E3D1 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		84F1BE152946C53A00F9C44B /* CenterViewWithCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterViewWithCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,7 @@
 				8472B817293D96E9006DE559 /* UIColor.swift */,
 				84452E1F2941E0810053E679 /* CustomBtn.swift */,
 				84452E23294320080053E679 /* ZoomFlowLayout.swift */,
+				8406C8CD2949623400FD3BA9 /* MyFlowLayout.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				849A288F292DCEAB0095A33A /* CInTViewController.swift */,
 				8472B819293D9B43006DE559 /* WaterfallLayoutVC.swift */,
 				84452E212942D7D40053E679 /* CenterItemVC.swift */,
+				84F1BE152946C53A00F9C44B /* CenterViewWithCode.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -392,12 +398,14 @@
 				849A2890292DCEAB0095A33A /* CInTViewController.swift in Sources */,
 				84452E202941E0810053E679 /* CustomBtn.swift in Sources */,
 				846A12A229276BF4002A4637 /* AnchorExtension.swift in Sources */,
+				84F1BE162946C53A00F9C44B /* CenterViewWithCode.swift in Sources */,
 				846A12A6292773C0002A4637 /* IGHomePageViewController.swift in Sources */,
 				842950142930618C0037BBD9 /* PicWithNameCollectionViewCell.swift in Sources */,
 				8472B814293D8CCA006DE559 /* UICustomCollectionViewLayout.swift in Sources */,
 				84C78ADD292B5E2400B7E3D1 /* MovieModel.swift in Sources */,
 				846A127529271E85002A4637 /* ViewController.swift in Sources */,
 				846A127129271E85002A4637 /* AppDelegate.swift in Sources */,
+				8406C8CE2949623400FD3BA9 /* MyFlowLayout.swift in Sources */,
 				844115A8292F767F006ECDD8 /* beachTableViewCell.swift in Sources */,
 				846A127329271E85002A4637 /* SceneDelegate.swift in Sources */,
 				8472B81A293D9B43006DE559 /* WaterfallLayoutVC.swift in Sources */,
