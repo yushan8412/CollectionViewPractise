@@ -84,25 +84,35 @@ extension CenterViewWithCode: UICollectionViewDelegate, UICollectionViewDataSour
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing // spacing between row
 
         var offset = targetContentOffset.pointee
+// test
+        let itemSize = CGSize(width: 350, height: 320)
+        let xCenterOffset = targetContentOffset.pointee.x + (itemSize.width / 2.0)
+        let indexPath2 = IndexPath(item: Int(xCenterOffset / (itemSize.width + 10 / 2.0)), section: 0)
+        let offset2 = CGPoint(x: (itemSize.width + 10.0 / 2.0) * CGFloat(indexPath2.item), y: 0)
+        
+
+
 
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         let roundedIndex = round(index) // round() 將一個數變成整數
         // 將 cellWidthIncludingSpacing 乘上 index 來算出要 scroll 到哪裡,
         offset = CGPoint(x: (roundedIndex * cellWidthIncludingSpacing) - scrollView.contentInset.left,
-                         y: -scrollView.contentInset.top)
+                         y: scrollView.contentInset.top)
         // 把整數的 offset 指回 pointee
         targetContentOffset.pointee = offset
         
         // 取得 indexPath, 並放大 cell
-        guard let collectionView = self.collectionView else {
-            print("no collectionView")
-            return
-        }
-        guard let indexPath = collectionView.indexPathForItem(at: offset) else {
-            print("失敗")
-            return
-        }
-        self.centerCell = self.collectionView?.cellForItem(at: indexPath) as! PicWithNameCollectionViewCell
+//        guard let collectionView = self.collectionView else {
+//            print("no collectionView")
+//            return
+//        }
+//        
+//        guard let indexPath = collectionView.indexPathForItem(at: offset2) else {
+//            print("失敗")
+//            return
+//        }
+    // Thread 1: Fatal error: Unexpectedly found nil while unwrapping an Optional value
+        self.centerCell = self.collectionView?.cellForItem(at: indexPath2) as! PicWithNameCollectionViewCell
         centerCell.transformToLarge()
     }
   

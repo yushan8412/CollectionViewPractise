@@ -68,7 +68,7 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
     
     func transformToLarge() {
         UIView.animate(withDuration: 0.2) {
-            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
             self.layer.borderColor = UIColor.gray.cgColor
         }
         let generator = UIImpactFeedbackGenerator(style: .light)
