@@ -14,7 +14,6 @@ class PicWithNameCollectionViewCell: UICollectionViewCell {
     
     var nameLB: UILabel = {
         let lb = UILabel()
-//        let font = UIFont(name: "Impact", size: 20)
         lb.textColor = .black
         lb.font = UIFont(name: "Impact", size: 20)
 //        let attributedText = NSMutableAttributedString(string: "Text.", attributes: [.foregroundColor: UIColor.black, .font: font])

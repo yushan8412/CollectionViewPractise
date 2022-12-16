@@ -14,8 +14,8 @@
             filePath = "CollectionLayoutPractise/View/CollectionViewCell/PicWithNameCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "nameLB"
             landmarkType = "24">
          </BreakpointContent>
@@ -103,22 +103,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF095DCE-6829-4569-96AF-F7B3A4C7A924"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CollectionLayoutPractise/Controller/CenterViewWithCode.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "CenterViewWithCode"
-            landmarkType = "21">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "17553912-F7A1-407B-8020-A42491264459"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -126,8 +110,8 @@
             filePath = "CollectionLayoutPractise/View/CollectionViewCell/PicWithNameCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "transformToLarge()"
             landmarkType = "7">
             <Locations>
@@ -174,8 +158,8 @@
             filePath = "CollectionLayoutPractise/View/CollectionViewCell/PicWithNameCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "transformToLarge()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +174,8 @@
             filePath = "CollectionLayoutPractise/Controller/CenterViewWithCode.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
             landmarkType = "7">
             <Locations>
@@ -231,96 +215,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EDC444CF-B891-493C-8441-0B7528D5084F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CollectionLayoutPractise/Extension/MyFlowLayout.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "MyFlowLayout"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6C8555D7-A402-47B4-BD35-374B2CC03141"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CollectionLayoutPractise/Extension/MyFlowLayout.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "MyFlowLayout"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "78203FBE-989C-4CFC-B8DB-37BDA8AEC117"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CollectionLayoutPractise/Extension/MyFlowLayout.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "MyFlowLayout"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "78203FBE-989C-4CFC-B8DB-37BDA8AEC117 - 41f306da40b8b315"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollectionLayoutPractise.MyFlowLayout.targetContentOffset(forProposedContentOffset: __C.CGPoint, withScrollingVelocity: __C.CGPoint) -&gt; __C.CGPoint"
-                  moduleName = "CollectionLayoutPractise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/CollectionLayoutPractise/CollectionLayoutPractise/Extension/MyFlowLayout.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1073">
-               </Location>
-               <Location
-                  uuid = "78203FBE-989C-4CFC-B8DB-37BDA8AEC117 - 41f306da40b8b315"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollectionLayoutPractise.MyFlowLayout.targetContentOffset(forProposedContentOffset: __C.CGPoint, withScrollingVelocity: __C.CGPoint) -&gt; __C.CGPoint"
-                  moduleName = "CollectionLayoutPractise"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/admin/Desktop/CollectionLayoutPractise/CollectionLayoutPractise/Extension/MyFlowLayout.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27"
-                  offsetFromSymbolStart = "1290">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C95BC28-F81A-427C-B539-40007F5E972B"
+            uuid = "F6B60E95-D7D9-4EA0-97F0-8F9E56189F57"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollectionLayoutPractise/Controller/CenterViewWithCode.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "scrollViewWillEndDragging(_:withVelocity:targetContentOffset:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "804629AD-1733-42B0-B0F5-B920BF49ABFB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollectionLayoutPractise/Controller/CenterViewWithCode.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "scrollViewDidScroll(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
