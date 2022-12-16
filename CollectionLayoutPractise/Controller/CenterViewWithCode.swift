@@ -16,7 +16,7 @@ class CenterViewWithCode: UIViewController, UICollectionViewDelegateFlowLayout {
     
     var picData = DataModel.shared.setCountryArrayUp()
     
-    var centerCell = PicWithNameCollectionViewCell()
+    var centerCell: PicWithNameCollectionViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +64,11 @@ extension CenterViewWithCode: UICollectionViewDelegate, UICollectionViewDataSour
 //        let centerPoint = CGPoint(x: self.collectionView?.frame.size.width ?? 0/2 + scrollView.contentOffset.x,
 //                                  y: self.collectionView?.frame.size.height ?? 0/2 + scrollView.contentOffset.y)
 //        guard let indexPath2 = self.collectionView?.indexPathForItem(at: centerPoint) else { print("失敗"); return }
+//
 //        self.centerCell = self.collectionView?.cellForItem(at: indexPath2) as! PicWithNameCollectionViewCell
 //        centerCell.transformToLarge()
-
+    
+//
 //        if let indexPath = self.collectionView!.indexPathForItem(at: centerPoint) {
 //            self.centerCell = self.collectionView?.cellForItem(at: indexPath) as! PicWithNameCollectionViewCell
 //            // call the zoom in function
@@ -83,15 +85,14 @@ extension CenterViewWithCode: UICollectionViewDelegate, UICollectionViewDataSour
         // 一次會顯示的 spacing(cell + 左右兩邊)
         let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing // spacing between row
 
+        let centerPoint = CGPoint(x: self.collectionView?.frame.size.width ?? 0/2 + scrollView.contentOffset.x,
+                                  y: self.collectionView?.frame.size.height ?? 0/2 + scrollView.contentOffset.y)
         var offset = targetContentOffset.pointee
+        
 // test
         let itemSize = CGSize(width: 350, height: 320)
         let xCenterOffset = targetContentOffset.pointee.x + (itemSize.width / 2.0)
         let indexPath2 = IndexPath(item: Int(xCenterOffset / (itemSize.width + 10 / 2.0)), section: 0)
-        let offset2 = CGPoint(x: (itemSize.width + 10.0 / 2.0) * CGFloat(indexPath2.item), y: 0)
-        
-
-
 
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         let roundedIndex = round(index) // round() 將一個數變成整數
@@ -101,19 +102,16 @@ extension CenterViewWithCode: UICollectionViewDelegate, UICollectionViewDataSour
         // 把整數的 offset 指回 pointee
         targetContentOffset.pointee = offset
         
-        // 取得 indexPath, 並放大 cell
-//        guard let collectionView = self.collectionView else {
-//            print("no collectionView")
-//            return
-//        }
-//        
-//        guard let indexPath = collectionView.indexPathForItem(at: offset2) else {
-//            print("失敗")
-//            return
-//        }
     // Thread 1: Fatal error: Unexpectedly found nil while unwrapping an Optional value
-        self.centerCell = self.collectionView?.cellForItem(at: indexPath2) as! PicWithNameCollectionViewCell
-        centerCell.transformToLarge()
+        self.centerCell = self.collectionView?.cellForItem(at: indexPath2) as? PicWithNameCollectionViewCell
+        centerCell?.transformToLarge()
+        
+        let testCell = self.centerCell
+        let offsetX = (centerPoint.x) * roundedIndex - (testCell?.center.x ?? 0)
+        if offsetX < -130 || offsetX > 130 {
+            testCell?.transformToStander()
+            self.centerCell = nil
+        }
     }
   
 }
