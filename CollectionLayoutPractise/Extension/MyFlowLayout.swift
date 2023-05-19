@@ -17,7 +17,7 @@ final class MyFlowLayout: UICollectionViewFlowLayout {
         itemSize = CGSize(width: 300, height: 270)
     }
     
-    // try to center the item in view (成功！)
+    // try to center the item in view (成功！但加上 zoom in 效果就不准惹  )
 //     offset = in scrollView it means the point that when you end scrolling
     
 //    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {

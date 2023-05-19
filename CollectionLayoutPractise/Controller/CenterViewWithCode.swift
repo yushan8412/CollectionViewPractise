@@ -27,6 +27,12 @@ class CenterViewWithCode: UIViewController, UICollectionViewDelegateFlowLayout {
         view.backgroundColor = .white
         setupCollectionView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let layoutMargin: CGFloat = self.collectionView.layoutMargins.left + self.collectionView.layoutMargins.right
+        let sideInset = (self.view.frame.width) - layoutMargin
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
+    }
 
     func setupCollectionView() {
 
@@ -83,10 +89,14 @@ extension CenterViewWithCode: UICollectionViewDelegate, UICollectionViewDataSour
     // 成功置中
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
-        guard let layout = collectionView.collectionViewLayout as? MyFlowLayout else { return }
+//        let pageWidth = Float(layout.itemSize.width + layout.minimumLineSpacing)
+//        let targetXContentOffset = Float(targetContentOffset.pointee.x)
+//        let contentWidth = Float(collectionView.contentSize.width)
         
+        guard let layout = collectionView.collectionViewLayout as? MyFlowLayout else { return }
+
         // 一次會顯示的 spacing(cell + 左右兩邊)
-        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing/2 // spacing between row
+        let cellWidthIncludingSpacing = (layout.itemSize.width + layout.minimumLineSpacing/2) // spacing between row
         var offset = targetContentOffset.pointee
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         let roundedIndex = round(index) // round() 將一個數變成整數

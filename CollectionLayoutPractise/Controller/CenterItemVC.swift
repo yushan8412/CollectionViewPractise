@@ -23,12 +23,17 @@ class CenterItemVC: UIViewController {
         view.backgroundColor = .white
         ConfigureUI()
         // 嘗試 fix 進入頁面的問題
-        self.collectionView?.scrollToItem(at:IndexPath(item: 0, section: 0) , at: .left, animated: true)
+//        self.collectionView?.scrollToItem(at:IndexPath(item: 0, section: 0) , at: .left, animated: true)
         
         UIView.animate(withDuration: 0.5) {
             self.collectionView?.scrollToItem(at:IndexPath(item: 1, section: 0) , at: .left, animated: true)
-
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let layoutMargin: CGFloat = (self.collectionView?.layoutMargins.left ?? 0) + (self.collectionView?.layoutMargins.right ?? 0)
+        let sideInset = (self.view.frame.width) - layoutMargin
+        self.collectionView?.contentInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
     }
     
     func ConfigureUI() {
